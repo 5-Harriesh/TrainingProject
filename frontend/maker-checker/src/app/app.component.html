@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }} project !
+  </h1>
+</div>
+
+
+<div class="container" fxLayout fxLayout.xs="row" fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+  <div fxFlex="100%">
+    <div fxLayout="column" fxFlex="50%">
+      <div fxFlex="100%">
+          <mat-card class="card-container">
+              <mat-card-header>
+                <mat-card-title>Calculator</mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                  <app-calculator></app-calculator>
+              </mat-card-content>
+        </mat-card></div>
+      <div fxFlex="100%">
+          <mat-card class="card-container">
+                <mat-card-header>
+                  <mat-card-title>Notes</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  Notes
+                </mat-card-content>
+          </mat-card>
+      </div>
+    </div>
+  <div fxFlex="50%">Login</div>
+</div>
+
+
+
+
+<router-outlet></router-outlet>

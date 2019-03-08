@@ -1,0 +1,14 @@
+calculator works!
+<form [formGroup]="calForm" (ngSubmit)="onSubmit()">
+    <div formGroupName="IExpression">
+        <mat-form-field>
+            <textarea matInput placeholder="expressionInput" formControlName="expressionInput"></textarea>
+        </mat-form-field>
+        <mat-form-field>
+            <textarea matInput placeholder="expressionOutput" formControlName="expressionOutput"></textarea>
+        </mat-form-field>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary">Evaluate</button>
+    </div>
+</form>
