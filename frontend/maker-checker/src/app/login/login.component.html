@@ -1,0 +1,16 @@
+<form [formGroup]="logForm" (ngSubmit)="onSubmit()">
+  <div formGroupName="IUser">
+    <mat-form-field>
+      <textarea matInput required placeholder="username" formControlName="username"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select matNativeControl required formControlName="role" placeholder="role">
+            <mat-option value="maker">Maker</mat-option>
+            <mat-option value="checker">Checker</mat-option>
+          </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-primary">Login</button>
+  </div>
+</form>

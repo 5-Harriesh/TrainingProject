@@ -10,15 +10,28 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
-import { environment } from 'src/environments/environment';
 import { ExpressionService } from './core/services/expression.service';
+import { NotesService } from './core/services/notes.service'
 import { HttpClientModule } from '@angular/common/http';
+import { NotesComponent } from './notes/notes.component';
+import { LoginComponent } from './login/login.component';
+import { CustomerlistComponent } from './customerlist/customerlist.component';
+import { MatTableModule, MatPaginatorModule, MatSortModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { HomeComponent } from './home/home.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { AppContainerComponent } from './appcontainer/appcontainer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    NotesComponent,
+    LoginComponent,
+    CustomerlistComponent,
+    HomeComponent,
+    AppContainerComponent
   ],
   imports: [
     BrowserModule,
@@ -28,9 +41,19 @@ import { HttpClientModule } from '@angular/common/http';
     FlexLayoutModule,
     MatCardModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
-  providers: [ExpressionService],
+  providers: [ExpressionService,NotesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
